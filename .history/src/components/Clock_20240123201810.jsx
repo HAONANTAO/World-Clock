@@ -3,8 +3,7 @@ import styled from "styled-components";
 import City from "./City";
 import Pointer from "./Pointer";
 import Time from "./Time";
-import BasicPointer from "./BasicPointer";
-//import PointerCenter from "./PointerCenter";
+
 const ClockStyle = styled.div`
   width: 400px;
   aspect-ratio: 1/1;
@@ -81,32 +80,6 @@ const Clock = (props) => {
     <ClockStyle light={light}>
       <City light={light}>{city}</City>
       <Pointer light={light}>
-        <BasicPointer
-          $light={light}
-          angle={0}
-          className="hour"
-          pointer_width={7}
-          block_size={100}
-          pointer_light="#848484"
-          pointer_dark="#ff6767"></BasicPointer>
-        <BasicPointer
-          $light={light}
-          angle={30}
-          className="minute"
-          pointer_width={4}
-          block_size={120}
-          pointer_light={"#848484"}
-          pointer_dark={"#fff"}
-          tail={0}></BasicPointer>
-        <BasicPointer
-          $light={light}
-          angle={60}
-          className="second"
-          pointer_width={2}
-          block_size={150}
-          pointer_light={"#ff6767"}
-          pointer_dark={"#87CEEB"}
-          tail={20}></BasicPointer>
       </Pointer>
       <Time light={light}>
         {year}-{month}-{day} {hour}:{minute}:{second}

@@ -4,7 +4,7 @@ import City from "./City";
 import Pointer from "./Pointer";
 import Time from "./Time";
 import BasicPointer from "./BasicPointer";
-//import PointerCenter from "./PointerCenter";
+import PointerCenter from "./PointerCenter";
 const ClockStyle = styled.div`
   width: 400px;
   aspect-ratio: 1/1;

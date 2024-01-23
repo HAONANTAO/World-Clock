@@ -4,7 +4,7 @@ import City from "./City";
 import Pointer from "./Pointer";
 import Time from "./Time";
 import BasicPointer from "./BasicPointer";
-//import PointerCenter from "./PointerCenter";
+import PointerCenter from "./PointerCenter";
 const ClockStyle = styled.div`
   width: 400px;
   aspect-ratio: 1/1;
@@ -104,9 +104,9 @@ const Clock = (props) => {
           className="second"
           pointer_width={2}
           block_size={150}
-          pointer_light={"#ff6767"}
-          pointer_dark={"#87CEEB"}
-          tail={20}></BasicPointer>
+          pointer_light={"#848484"}
+          pointer_dark={"#fff"}
+          tail={0}></BasicPointer>
       </Pointer>
       <Time light={light}>
         {year}-{month}-{day} {hour}:{minute}:{second}
