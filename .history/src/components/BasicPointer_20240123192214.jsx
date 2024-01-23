@@ -35,7 +35,7 @@ BasicPointer.defaultProps = {
   pointer_radius: "6px 6px 3px 3px",
   pointer_width: 4,
   z_index: 0,
-  angle: 0,
+  angle:
 };
 
 export default BasicPointer;

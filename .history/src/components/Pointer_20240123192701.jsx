@@ -6,25 +6,6 @@ const PointerStyle = styled.div`
   margin-bottom: 1rem;
   color: ${(props) =>
     props.light ? props.theme.color.light : props.theme.color.dark};
-
-  position: relative;
-  width: ${(props) => props.size};
-  aspect-ratio: 1/1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: ${(props) =>
-    props.$light
-      ? `${props.white} ${props.bg_white}`
-      : `${props.black} ${props.bg_black}`};
-
-  background-size: cover;
-  border-radius: 50%;
-
-  border: 14px solid ${(props) => (props.$light ? props.white : props.black)};
-
-  box-shadow: ${(props) =>
-    props.$light ? props.bg_white_box_shadow : props.bg_black_box_shadow};
 `;
 
 PointerStyle.defaultProps = {

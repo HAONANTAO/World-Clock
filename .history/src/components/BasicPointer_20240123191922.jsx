@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 //attrs是用来应对动态的
-const BasicPointer = styled.attrs((props) => ({
+const BasicPointerStyle = styled.attrs((props) => ({
   style: {
     transform: `rotateZ(${props.angle}deg)`,
   },
@@ -26,16 +26,18 @@ z-index:${(props) => props.z_index};
 }
 `;
 
-BasicPointer.defaultProps = {
+BasicPointerStyle.defaultProps = {
   light: true,
-  block_size: 100,
+  size: 100,
   tails: 0,
   pointer_light: "#ff6767",
   pointer_dark: "#69c0ff",
   pointer_radius: "6px 6px 3px 3px",
-  pointer_width: 4,
   z_index: 0,
-  angle: 0,
+  width: 4,
+};
+const BasicPointer = () => {
+  return <div></div>;
 };
 
 export default BasicPointer;

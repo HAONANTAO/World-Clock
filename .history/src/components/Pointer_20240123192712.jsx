@@ -25,6 +25,8 @@ const PointerStyle = styled.div`
 
   box-shadow: ${(props) =>
     props.$light ? props.bg_white_box_shadow : props.bg_black_box_shadow};
+
+  color: ${(props) => (props.$light ? props.black : props.white)};
 `;
 
 PointerStyle.defaultProps = {
