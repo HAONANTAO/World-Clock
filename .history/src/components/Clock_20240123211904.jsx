@@ -95,7 +95,7 @@ const Clock = (props) => {
       <Pointer light={light}>
         <BasicPointer
           $light={light}
-          angle={hourDeg}
+          angle={0}
           className="hour"
           pointer_width={7}
           block_size={100}
@@ -103,7 +103,7 @@ const Clock = (props) => {
           pointer_dark="#ff6767"></BasicPointer>
         <BasicPointer
           $light={light}
-          angle={minuteDeg}
+          angle={MinuteDeg}
           className="minute"
           pointer_width={4}
           block_size={120}

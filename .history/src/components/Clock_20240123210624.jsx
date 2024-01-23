@@ -45,6 +45,8 @@ const Clock = (props) => {
   //360/60=6
   const [secondDeg, setSecondDeg] = useState();
 
+  
+
   //时间函数
   const setTime = () => {
     //当前时间
@@ -53,7 +55,6 @@ const Clock = (props) => {
     //有时区的时差
     const offset = timezone * 60 * 60 * 1000;
     const timeWithOffset = new Date(currentTime.getTime() + offset);
-    const unitDeg = 360 / 60;
 
     setYear(timeWithOffset.getUTCFullYear());
     //从0开始，要+1
@@ -64,9 +65,7 @@ const Clock = (props) => {
     setSecond(timeWithOffset.getUTCSeconds());
 
     //度数旋转
-    setSecondDeg(timeWithOffset.getUTCSeconds() * unitDeg);
-    setMinuteDeg(timeWithOffset.getUTCMinutes() * unitDeg);
-    setHourDeg(timeWithOffset.getUTCHours() * unitDeg * 5);
+    set
   };
 
   //确定心跳，多长时间进行一次时间的更新
@@ -95,7 +94,7 @@ const Clock = (props) => {
       <Pointer light={light}>
         <BasicPointer
           $light={light}
-          angle={hourDeg}
+          angle={0}
           className="hour"
           pointer_width={7}
           block_size={100}
@@ -103,7 +102,7 @@ const Clock = (props) => {
           pointer_dark="#ff6767"></BasicPointer>
         <BasicPointer
           $light={light}
-          angle={minuteDeg}
+          angle={30}
           className="minute"
           pointer_width={4}
           block_size={120}
@@ -112,7 +111,7 @@ const Clock = (props) => {
           tail={0}></BasicPointer>
         <BasicPointer
           $light={light}
-          angle={secondDeg}
+          angle={60}
           className="second"
           pointer_width={2}
           block_size={150}

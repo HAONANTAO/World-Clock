@@ -64,9 +64,7 @@ const Clock = (props) => {
     setSecond(timeWithOffset.getUTCSeconds());
 
     //度数旋转
-    setSecondDeg(timeWithOffset.getUTCSeconds() * unitDeg);
-    setMinuteDeg(timeWithOffset.getUTCMinutes() * unitDeg);
-    setHourDeg(timeWithOffset.getUTCHours() * unitDeg * 5);
+    setSecondDeg(second * unitDeg);
   };
 
   //确定心跳，多长时间进行一次时间的更新
@@ -95,7 +93,7 @@ const Clock = (props) => {
       <Pointer light={light}>
         <BasicPointer
           $light={light}
-          angle={hourDeg}
+          angle={0}
           className="hour"
           pointer_width={7}
           block_size={100}
@@ -103,7 +101,7 @@ const Clock = (props) => {
           pointer_dark="#ff6767"></BasicPointer>
         <BasicPointer
           $light={light}
-          angle={minuteDeg}
+          angle={30}
           className="minute"
           pointer_width={4}
           block_size={120}
@@ -112,7 +110,7 @@ const Clock = (props) => {
           tail={0}></BasicPointer>
         <BasicPointer
           $light={light}
-          angle={secondDeg}
+          angle={SecondDeg}
           className="second"
           pointer_width={2}
           block_size={150}
