@@ -69,11 +69,7 @@ const Clock = (props) => {
       timeWithOffset.getUTCMinutes() * unitDeg +
         (timeWithOffset.getUTCSeconds() / 60) * unitDeg,
     );
-    setHourDeg(
-      timeWithOffset.getUTCHours() * unitDeg * 5 +
-        (timeWithOffset.getUTCMinutes() / 60) * unitDeg * 5 +
-        (timeWithOffset.getUTCSeconds() / 60 / 60) * unitDeg * 5,
-    );
+    setHourDeg(timeWithOffset.getUTCHours() * unitDeg * 5+);
   };
 
   //确定心跳，多长时间进行一次时间的更新
@@ -87,8 +83,8 @@ const Clock = (props) => {
 
   //算黑夜还是白天
   useEffect(() => {
-    //朝九晚五
-    if (hour >= 9 && hour <= 17) {
+    //早上6点到晚上6点之间为白天
+    if (hour >= 6 && hour < 18) {
       setLight(true);
     } else {
       setLight(false);

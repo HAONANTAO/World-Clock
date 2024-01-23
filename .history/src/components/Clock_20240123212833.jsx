@@ -88,7 +88,7 @@ const Clock = (props) => {
   //算黑夜还是白天
   useEffect(() => {
     //朝九晚五
-    if (hour >= 9 && hour <= 17) {
+    if (hour >= 9 && hour < 17) {
       setLight(true);
     } else {
       setLight(false);
