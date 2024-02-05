@@ -1,7 +1,9 @@
 # World-Clock-Website
 
 Using the React + Vite technology stack to create a front-end dynamic page that
-Showing clocks from four different regions: Melbourne, China, London, and NewYork.
+Showing clocks from four different regions: Melbourne, China, London, and New York.
+
+[https://iridescent-gaufre-dce53f.netlify.app](https://iridescent-gaufre-dce53f.netlify.app/)
 
 <!-- PROJECT SHIELDS -->
 
@@ -97,7 +99,7 @@ yarn dev
 
 ### Deployment
 
-
+Use the NetLify
 
 ### Skills
 
