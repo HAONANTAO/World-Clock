@@ -10,6 +10,7 @@ Showing clocks from four different regions: Melbourne, China, London, and NewYor
 <!-- PROJECT LOGO -->
 <br />
 
+![Screenshot 2024-02-04 at 21.10.40](Web.png)
 
 </p>
 
